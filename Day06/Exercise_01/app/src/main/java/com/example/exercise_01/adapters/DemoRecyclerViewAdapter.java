@@ -30,6 +30,7 @@ public class DemoRecyclerViewAdapter extends RecyclerView.Adapter<DemoRecyclerVi
     }
     @NonNull
     @Override
+    //Bước 4
     // Tạo ra đối tượng ViewHolder để rec view sử dụng
     public DemoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         DemoViewHolder demoViewHolder;
@@ -39,7 +40,7 @@ public class DemoRecyclerViewAdapter extends RecyclerView.Adapter<DemoRecyclerVi
         demoViewHolder = new DemoViewHolder(layout);
         return demoViewHolder;
     }
-
+    //      Bước 5
     @Override
     //Bind data vào view
     public void onBindViewHolder(@NonNull DemoViewHolder holder, int position) {
@@ -48,7 +49,7 @@ public class DemoRecyclerViewAdapter extends RecyclerView.Adapter<DemoRecyclerVi
         holder.txtRight.setText(item.get("age"));
 
     }
-
+    //Bước 6
     @Override
     public int getItemCount() {
         return items.size();
@@ -61,6 +62,7 @@ public class DemoRecyclerViewAdapter extends RecyclerView.Adapter<DemoRecyclerVi
             TextView txtLeft, txtRight;
         public DemoViewHolder(@NonNull View itemView) {
             super(itemView);
+            //Bước 7
             txtLeft = itemView.findViewById(R.id.txt_left);
             txtRight = itemView.findViewById(R.id.txt_right);
 
