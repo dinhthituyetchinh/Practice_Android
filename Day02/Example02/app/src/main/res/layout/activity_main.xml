@@ -8,9 +8,6 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:textAllCaps="true"
-        android:textColor="@color/design_default_color_error"
-        android:textSize="100dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
