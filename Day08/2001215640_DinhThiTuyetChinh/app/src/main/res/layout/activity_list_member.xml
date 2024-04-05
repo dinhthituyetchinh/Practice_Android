@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:gravity="center"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ListMemberActivity">
+
+   <RelativeLayout
+
+       android:gravity="center_horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <TextView
+           android:layout_marginTop="100dp"
+           android:id="@+id/lblList"
+           android:layout_centerHorizontal="true"
+           android:text="List Member"
+           android:textSize="30dp"
+           android:textStyle="bold"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+<EditText
+    android:id="@+id/txtSearch"
+    android:layout_marginTop="50dp"
+    android:layout_centerHorizontal="true"
+    android:layout_alignTop="@+id/lblList"
+    android:hint="Gõ bất kỳ để tìm kiếm"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+       <androidx.recyclerview.widget.RecyclerView
+          android:layout_marginTop="100dp"
+           android:layout_centerHorizontal="true"
+           android:layout_alignTop="@+id/lblList"
+           android:id="@+id/recListMember"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+       <Button
+           android:id="@+id/btnAddNewMember"
+           android:layout_centerHorizontal="true"
+           android:text="Add new member"
+           android:textSize="25dp"
+           android:width="300dp"
+           android:height="80dp"
+           android:layout_alignParentBottom="true"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+   </RelativeLayout>
+</RelativeLayout>

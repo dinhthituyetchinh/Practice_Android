@@ -1,5 +1,8 @@
 package com.example.example02;
 
+import static java.lang.Thread.sleep;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 
@@ -16,5 +19,26 @@ public class MainActivity extends AppCompatActivity {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
        setContentView(R.layout.activity_main);
+
+        Intent intent = new Intent(this, ThirdActivity.class);
+        startActivity(intent);
+    }
+
+    public void  toSecondActivity()
+    {
+        Thread setTime = new Thread();
+
+        try {
+            sleep(5000);
+        }
+        catch (Exception e)
+        {
+
+        }
+        finally {
+            Intent intent = new Intent(this, SecondActivity.class);
+            startActivity(intent);
+        }
+        setTime.start();
     }
 }

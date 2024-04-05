@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
               //  lvDemo.setAdapter(simpleAdapter);
 
-               // demoCustomAdapter.addItem(item3);
+               //demoCustomAdapter.addItem(item3);
             }
         });
 //        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
@@ -111,5 +111,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    id
 }

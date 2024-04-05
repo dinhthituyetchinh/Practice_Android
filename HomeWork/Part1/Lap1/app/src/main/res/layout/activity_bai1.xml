@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Bai1Activity">
+
+    <TextView
+        android:id="@+id/txtRed"
+        android:text="RED"
+        android:background="#f00"
+        android:layout_weight=".14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#000"/>
+    <TextView
+        android:id="@+id/txtOrange"
+        android:text="Orange"
+        android:gravity="center"
+        android:textColor="#000"
+        android:background="#ffa500"
+        android:layout_weight=".14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtYellow"
+        android:text="Yellow"
+        android:gravity="center"
+        android:textColor="#000"
+        android:background="#fff000"
+        android:layout_weight=".14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txtGreen"
+        android:text="Green"
+        android:gravity="center"
+        android:textColor="#000"
+        android:background="#0f0"
+        android:layout_weight=".14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtBlue"
+        android:text="Blue"
+        android:gravity="center"
+        android:textColor="#000"
+        android:background="#00f"
+        android:layout_weight=".14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtIndigo"
+        android:text="INDIGO"
+        android:gravity="center"
+        android:textColor="#000"
+        android:background="#4B0082"
+        android:layout_weight=".14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtViolet"
+        android:text="Violet"
+        android:gravity="center"
+        android:textColor="#000"
+        android:background="#ee82ee"
+        android:layout_weight=".14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

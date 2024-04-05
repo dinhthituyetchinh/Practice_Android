@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_centerHorizontal="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMemberActivity">
+
+
+    <TextView
+        android:layout_marginTop="100dp"
+        android:id="@+id/txtAddMember"
+        android:layout_centerHorizontal="true"
+        android:text="Add Member"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:width="200dp"
+        android:id="@+id/lblFirstName"
+        android:text="First Name"
+        android:layout_marginTop="50dp"
+        android:layout_alignTop="@id/txtAddMember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+   <EditText
+       android:layout_marginTop="20dp"
+       android:layout_alignTop="@id/lblFirstName"
+       android:id="@+id/txtFirstName"
+       android:width="200dp"
+       android:hint="Shehan"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/lblLastName"
+        android:text="Last Name"
+        android:layout_marginTop="50dp"
+        android:width="200dp"
+        android:layout_toRightOf="@id/lblFirstName"
+        android:layout_alignTop="@id/txtAddMember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:layout_marginTop="20dp"
+        android:layout_alignTop="@id/lblLastName"
+        android:layout_toRightOf="@+id/txtFirstName"
+        android:width="200dp"
+        android:id="@+id/txtLastName"
+        android:hint="Dulmina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/lblEmail"
+        android:layout_marginTop="70dp"
+        android:layout_alignTop="@id/txtFirstName"
+        android:text="Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:layout_alignTop="@id/lblEmail"
+        android:width="200dp"
+        android:id="@+id/txtEmail"
+        android:hint="sendtocynos@gmail.com"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="50dp"
+        android:layout_alignTop="@id/txtEmail"
+        android:id="@+id/btnSubmit"
+        android:text="Submit"
+        android:width="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:backgroundTint="@android:color/darker_gray"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_alignTop="@id/txtEmail"
+        android:layout_toRightOf="@+id/btnSubmit"
+        android:id="@+id/btnCancel"
+        android:text="Cancel"
+        android:width="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
