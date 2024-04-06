@@ -1,5 +1,6 @@
 package com.example.example;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,6 +23,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+//        Intent intent = new Intent(this, SecondActivity.class);
+//        startActivity(intent);
+
+
+        Intent intent = new Intent(this, ThirdActivity.class);
+        startActivity(intent);
+
+
             // Bước 3: Lấy id từ layout và setSupportActionBar(toolbar);
         toolbar = findViewById(R.id.toolBarTitle);
         setSupportActionBar(toolbar);

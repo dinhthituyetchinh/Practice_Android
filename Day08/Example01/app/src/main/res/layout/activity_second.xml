@@ -4,17 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     tools:context=".SecondActivity">
+<!--Bước 1: Chuyển layout thành DrawerLayout -->
+
+
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarTitle"
+        android:background="@android:color/holo_red_dark"
 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+    </androidx.appcompat.widget.Toolbar>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--Bước 2: Tạo NavigationView, phải tạo bên dưới toolbar vì có app:menu="@menu/menu_toolbar"
+nếu bỏ lên trên một số tường hợp sẽ lỗi-->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navMenu"
+        android:layout_marginTop="90dp"
+        app:menu="@menu/menu_toolbar"
         android:layout_gravity="left"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+<!--    Bước 3: Bên SecondActivity-->
 </androidx.drawerlayout.widget.DrawerLayout>
