@@ -45,7 +45,7 @@ public class ListItemRecycleView extends RecyclerView.Adapter<ListItemRecycleVie
         holder.id.setText(item.getId());
         holder.name.setText(item.getName());
         holder.email.setText(item.getEmail());
-
+        holder.delete.setText("X");
     }
     @Override
     public int getItemCount() {
@@ -54,7 +54,7 @@ public class ListItemRecycleView extends RecyclerView.Adapter<ListItemRecycleVie
 
     public class ViewHolder extends RecyclerView.ViewHolder
     {
-        TextView id, name, email;
+        TextView id, name, email, delete;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -62,6 +62,7 @@ public class ListItemRecycleView extends RecyclerView.Adapter<ListItemRecycleVie
             id = itemView.findViewById(R.id.txtID);
             name = itemView.findViewById(R.id.txtName);
             email = itemView.findViewById(R.id.txtEmail);
+            delete = itemView.findViewById(R.id.txtDelete);
         }
     }
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--Bước 4 tiếp theo-->
+    <item android:id="@+id/itemIn" android:title="In" android:icon="@drawable/insert_word_svgrepo_com"/>
+    <item android:id="@+id/itemVanBan" android:title="Văn bản" android:icon="@drawable/printer_svgrepo_com"/>
+    <item android:id="@+id/itemCat" android:title="Cắt" android:icon="@drawable/to_cut_svgrepo_com" app:showAsAction="always"/>
+</menu>

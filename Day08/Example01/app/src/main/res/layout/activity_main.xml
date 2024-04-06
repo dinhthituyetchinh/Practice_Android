@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+ <!-- Bước 1: Vào app/manifests/AndroidManifest.xml
+      Tại android:theme="@style/Theme.Example" ctrl + click
+      để vào themes.xml
+    <style name="Base.Theme.Example" parent="Theme.Material3.DayNight.NoActionBar">
+  => NoActionBar cho biết chưa có tool bar nào sẵn trong activity -->
+<!--Bước 2: Tạo toolbar, lưu ý toolbar của androidx,
+   Chèn Toolbar vào trong file layout, sử dụng
+   android:fitsSystemWindows=“true” ở layout gốc để Android
+   tính toán chính xác chiều cao khi đã hủy ActionBar -->
+ <androidx.appcompat.widget.Toolbar
+     android:id="@+id/toolBarTitle"
+        android:background="@android:color/holo_red_dark"
+
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+
+ </androidx.appcompat.widget.Toolbar>
+<!--Bước 3: Bên MainActivity-->
+</androidx.constraintlayout.widget.ConstraintLayout>

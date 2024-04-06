@@ -2,6 +2,7 @@ package com.example.a2001215640_dinhthituyetchinh_kt;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.Button;
@@ -44,9 +45,17 @@ public class ListMemberActivity extends AppCompatActivity {
 
         dsdt = new ArrayList<>();
         Member dt = new Member("M001", "Taylor", "swift@gmail.com");
-        Member dt2 = new Member("M002", "Susan", "susan@gmail.com");
+        Member dt2 = new Member("M002", "Susan Alexsandra", "susan@gmail.com");
+        Member dt3 = new Member("M005", "Richard Shotwell", "richard@gmail.com");
+        Member dt4 = new Member("M008", "Jonathan Lyndale", "jona@gmail.com");
+        Member dt5 = new Member("M011", "Amala Ratna", "amala@gmail.com");
         dsdt.add(dt);
         dsdt.add(dt2);
+        dsdt.add(dt3);
+        dsdt.add(dt4);
+        dsdt.add(dt5);
+
+     // dsdt = (ArrayList<Member>) getIntent().getSerializableExtra("package");
 
         recyclerViewAdapter = new ListItemRecycleView(this, dsdt);
         recyclerView = findViewById(R.id.recListMember);
@@ -93,6 +102,7 @@ public class ListMemberActivity extends AppCompatActivity {
 
             }
         });
+
 
 
     }
