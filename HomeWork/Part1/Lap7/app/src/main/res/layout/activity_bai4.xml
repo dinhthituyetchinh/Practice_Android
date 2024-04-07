@@ -6,6 +6,7 @@
     android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="start"
     tools:context=".Bai4Activity">
 
     <RelativeLayout
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content">
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolBar"
-            android:background="#CD4040"
+            android:background="#6919F6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -21,7 +22,11 @@
     </RelativeLayout>
 
     <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/navDrawer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="left"
+        />
 
 </androidx.drawerlayout.widget.DrawerLayout>

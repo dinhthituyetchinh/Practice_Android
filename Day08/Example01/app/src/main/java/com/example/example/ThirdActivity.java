@@ -13,19 +13,21 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class ThirdActivity extends AppCompatActivity {
 
-    Fragment fragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_third);
 
+        getFragmentActivity();
     }
 
     protected void getFragmentActivity()
     {
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = manager.beginTransaction();
-
+        BlankFragment blankFragment = BlankFragment.newInstance("Andra", 12);
+        fragmentTransaction.replace(R.id.fragment_container, blankFragment );
+        fragmentTransaction.commit();
     }
 }
