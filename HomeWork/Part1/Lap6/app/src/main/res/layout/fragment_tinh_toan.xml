@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TinhToanFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:background="#38BD3E"
+        android:id="@+id/lblTitle"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:text="Cộng trừ nhân chia" />
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:id="@+id/lblSoA"
+        android:text="Số a:"
+        android:layout_below="@+id/lblTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/txtSoThuNhat"
+        android:layout_toRightOf="@+id/lblSoA"
+        android:layout_below="@+id/lblTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:id="@+id/lblSoB"
+        android:text="Số b:"
+        android:layout_below="@+id/txtSoThuNhat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/txtSoThuHai"
+        android:layout_toRightOf="@+id/lblSoB"
+        android:layout_below="@+id/txtSoThuNhat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnCong"
+        android:text="+"
+        android:backgroundTint="#8E8B8B"
+        android:layout_below="@+id/lblSoB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnTru"
+        android:text="-"
+        android:backgroundTint="#8E8B8B"
+        android:layout_toRightOf="@+id/btnCong"
+        android:layout_below="@+id/lblSoB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnNhan"
+        android:text="*"
+        android:backgroundTint="#8E8B8B"
+        android:layout_toRightOf="@+id/btnTru"
+        android:layout_below="@+id/lblSoB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnChia"
+        android:text="/"
+        android:backgroundTint="#8E8B8B"
+        android:layout_toRightOf="@+id/btnNhan"
+        android:layout_below="@+id/lblSoB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        android:background="#38BD3E"
+        android:layout_below="@+id/btnCong"
+        android:id="@+id/lblResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textAlignment="center" />
+</RelativeLayout>
