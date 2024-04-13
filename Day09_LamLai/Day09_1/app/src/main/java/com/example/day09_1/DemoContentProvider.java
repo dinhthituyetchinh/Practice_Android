@@ -1,4 +1,4 @@
-package com.example.example;
+package com.example.day09_1;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
@@ -17,13 +17,11 @@ import java.util.Random;
 
 public class DemoContentProvider extends ContentProvider {
 
-    //implement method: Để chuột vào ContentProvider và alt + enter
-    //Trong Mainfest cũng phải khai báo
     private static  final  String AUTHORITY = DemoContentProvider.class.getCanonicalName();
     private  static  final UriMatcher URI_MATCHER = new UriMatcher(UriMatcher.NO_MATCH);
 
     static{
-    URI_MATCHER.addURI(AUTHORITY,"random-number" , 123);
+        URI_MATCHER.addURI(AUTHORITY,"random-number" , 123);
         URI_MATCHER.addURI(AUTHORITY,"read-contact" , 124);
     }
     @Override
@@ -34,7 +32,6 @@ public class DemoContentProvider extends ContentProvider {
     @Nullable
     @Override
     public Cursor query(@NonNull Uri uri, @Nullable String[] projection, @Nullable String selection, @Nullable String[] selectionArgs, @Nullable String sortOrder) {
-       // Cung cấp dữ liệu cho bên ứng dụng muốn đọc
         int type = URI_MATCHER.match(uri);
         if(type == 123)
         {
