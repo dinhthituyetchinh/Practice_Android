@@ -32,15 +32,15 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         txtDemo = findViewById(R.id.txtDemo);
-//
-//        Intent intent = new Intent(this, MainActivity3.class);
-//        startActivity(intent);
+
+        Intent intent = new Intent(this, MainActivity4.class);
+        startActivity(intent);
 
 
        // write(this, "test.txt", "test tinh nang ghi file");
 //        String kq = read(this, "test.txt");
 //        txtDemo.setText(kq);
-        xinQuyen();
+     //   xinQuyen();
     }
 
     public void xinQuyen()
@@ -78,7 +78,9 @@ public class MainActivity extends AppCompatActivity {
         if(kqRead == PackageManager.PERMISSION_GRANTED && kqWrite == PackageManager.PERMISSION_GRANTED  )
         {
             Log.e("MainActivity", "Được cho phép");
-            writeExternalFile("ghiTuNgoaiTHuMucGoc.txt", "file được gi ở ngoài thư mục gốc");
+            writeExternalFile("ghiTuNgoaiTHuMucGoc.txt", "file được ghi ở ngoài thư mục gốc 1");
+            txtDemo.setText(readExternalFile("ghiTuNgoaiTHuMucGoc.txt"));
+
         }
         else {
             Log.e("MainActivity", "Không cho phép");
@@ -114,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
             if(grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED)
             {
                 Log.e("MainActivity", "Được cho phép");
-                writeExternalFile("ghiTuNgoaiTHuMucGoc2.txt", "file được gi ở ngoài thư mục gốc 2");
+                writeExternalFile("ghiTuNgoaiTHuMucGoc2.txt", "file được ghi ở ngoài thư mục gốc 2");
                 txtDemo.setText(readExternalFile("ghiTuNgoaiTHuMucGoc2.txt"));
             }
             else {

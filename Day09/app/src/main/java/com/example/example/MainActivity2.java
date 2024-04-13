@@ -38,11 +38,11 @@ public class MainActivity2 extends AppCompatActivity {
         // Đọc dữ liệu
 
         //Test data đúng
-//        tv2.setText(
-//                sf.getString("name", "gia tri mac dinh")+ " - " +sf.getInt("age", 0));
-
-        //Test data sai
         tv2.setText(
-                sf.getString("name_1", "gia tri mac dinh")+ " - " +sf.getInt("age_1", 0));
+                sf.getString("name", "gia tri mac dinh")+ " - " +sf.getInt("age", 0));
+
+//        //Test data sai
+//        tv2.setText(
+//                sf.getString("name_1", "gia tri mac dinh")+ " - " +sf.getInt("age_1", 0));
     }
 }
