@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Bai2Activity">
+
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:text="Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_alignTop="@+id/lblName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/lblClass"
+        android:text="Class"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_alignTop="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/txtClass"
+        android:layout_alignTop="@+id/lblClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:text="Add"
+        android:backgroundTint="#CFCBCB"
+        android:layout_marginTop="50dp"
+        android:layout_alignTop="@+id/txtClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnLoad"
+        android:text="Load"
+        android:backgroundTint="#CFCBCB"
+        android:layout_marginTop="50dp"
+        android:layout_alignTop="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvShow"
+        android:layout_marginTop="50dp"
+        android:layout_alignTop="@+id/btnLoad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>
