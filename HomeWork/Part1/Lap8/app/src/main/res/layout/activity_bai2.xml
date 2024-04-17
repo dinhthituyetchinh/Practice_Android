@@ -4,12 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     tools:context=".Bai2Activity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarBai2"
+        android:background="#4559C8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <TextView
         android:id="@+id/lblName"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:layout_marginStart="20dp"
         android:text="Name"
         android:layout_width="wrap_content"

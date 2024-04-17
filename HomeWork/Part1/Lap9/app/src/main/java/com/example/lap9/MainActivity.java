@@ -1,4 +1,4 @@
-package com.example.lap8;
+package com.example.lap9;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        Intent intent = new Intent(this, Bai2Activity.class);
+        Intent intent = new Intent(this, Bai1Activity.class);
+
         startActivity(intent);
     }
 }
