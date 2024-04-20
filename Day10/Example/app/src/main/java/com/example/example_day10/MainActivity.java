@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         tvDemo = findViewById(R.id.lblShow);
         btnDemo = findViewById(R.id.btnShow);
 
-        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        Intent intent = new Intent(MainActivity.this, MainActivity4.class);
         startActivity(intent);
 
 
@@ -55,5 +55,7 @@ public class MainActivity extends AppCompatActivity {
 //
 //            }
 //        });
+
+
     }
 }
