@@ -29,6 +29,14 @@ android {
 }
 
 dependencies {
+//    Bai 3 _ Buoc 1
+//    Nếu lúc tạo project ở Build configuration language là Kotlin thì dùng implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.17.0")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.17.0")
+
+    //Bai 4 _ Buoc 1
+
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-jackson:2.11.0")
 
     implementation(libs.appcompat)
     implementation(libs.material)
