@@ -65,9 +65,9 @@ public class MainActivity extends AppCompatActivity {
 
         //Bai 4 _
         btn.setOnClickListener(e->{
-           // getNetworkResourceRetrofit2();
+            getNetworkResourceRetrofit2();
 
-            getNetworkResourceRetrofit2_CaseDetailEmployee("1");
+            //getNetworkResourceRetrofit2_CaseDetailEmployee("1");
         });
     }
 
