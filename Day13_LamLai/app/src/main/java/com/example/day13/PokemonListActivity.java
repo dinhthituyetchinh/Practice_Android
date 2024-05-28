@@ -1,7 +1,10 @@
 package com.example.day13;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.widget.EditText;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import adapter.PokemonAdapter;
@@ -23,15 +27,33 @@ public class PokemonListActivity extends AppCompatActivity {
     PokemonAdapter pokemonAdapter;
     RecyclerView recyclerView;
     List<Pokemon> originalItems;
+    EditText search;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pokemon_list);
         loadListPokemon();
-
         recyclerView = findViewById(R.id.listPokemon_RecyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
+
+        search = findViewById(R.id.search_bar);
+        search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
     protected void  loadListPokemon()
@@ -42,13 +64,19 @@ public class PokemonListActivity extends AppCompatActivity {
                 .build();
 
         Api api = retrofit.create(Api.class);
+
         api.getListPokemon().enqueue(new Callback<List<Pokemon>>() {
 
             @Override
             public void onResponse(Call<List<Pokemon>> call, Response<List<Pokemon>> response) {
+                recyclerView = findViewById(R.id.listPokemon_RecyclerView);
+                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(PokemonListActivity.this);
+                recyclerView.setLayoutManager(linearLayoutManager);
+
                 originalItems = response.body();
                 pokemonAdapter = new PokemonAdapter(PokemonListActivity.this, originalItems);
                 recyclerView.setAdapter(pokemonAdapter);
+
                 for (Pokemon pokemon :  response.body())
                 {
 
@@ -56,6 +84,7 @@ public class PokemonListActivity extends AppCompatActivity {
                     Log.e("PokemonListActivity Name", pokemon.getName());
                     Log.e("PokemonListActivity Img", pokemon.getImage());
                     Log.e("PokemonListActivity Type", pokemon.getTypes().stream().count()+"");
+
 
 
                 }

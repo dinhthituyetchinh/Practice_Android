@@ -19,13 +19,12 @@ import java.util.List;
 public class PokemonTypeAdapter extends RecyclerView.Adapter<PokemonTypeAdapter.PokemonTypeViewHolder>
 {
     private final Context context;
-    private final List<String> typeItems;
+    private List<String> typeItems;
 
     public PokemonTypeAdapter(Context context, List<String> type_items) {
         this.context = context;
         typeItems = type_items;
     }
-
     @NonNull
     @Override
     public PokemonTypeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -36,9 +35,10 @@ public class PokemonTypeAdapter extends RecyclerView.Adapter<PokemonTypeAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull PokemonTypeViewHolder holder, int position) {
-        String type = typeItems.get(position);
-        PokemonTypeViewModel pokemonTypeViewModel = new PokemonTypeViewModel(type);
-        holder.pokemonTypeListBinding.setPokemonTypeVm(pokemonTypeViewModel);
+//        String type = typeItems.get(position);
+//        PokemonTypeViewModel pokemonTypeViewModel = new PokemonTypeViewModel(type);
+//        holder.pokemonTypeListBinding.setPokemonTypeVm(pokemonTypeViewModel);
+        holder.pokemonTypeListBinding.setPokemonTypeVm(new PokemonTypeViewModel(typeItems.get(position)));
     }
 
     @Override

@@ -19,7 +19,7 @@ import java.util.List;
 
 public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonViewHolder> {
     private final Context context;
-    private List<Pokemon> items;
+    private final List<Pokemon> items;
 
     public PokemonAdapter(Context context, List<Pokemon> items) {
         this.context = context;
@@ -43,9 +43,8 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonV
         Pokemon pokemon = items.get(position);
         PokemonViewModel pokemonViewModel = new PokemonViewModel(pokemon);
         holder.listItemPokemonBinding.setPokemonVm(pokemonViewModel);
+        holder.bind(pokemon);
 
-        PokemonTypeAdapter pokemonTypeAdapter = new PokemonTypeAdapter(context, pokemon.getTypes());
-        holder.listItemPokemonBinding.pokemonTypes.setAdapter(pokemonTypeAdapter);
     }
 
     @Override
@@ -55,16 +54,23 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonV
 
     public class PokemonViewHolder extends RecyclerView.ViewHolder
     {
-
         ListItemPokemonBinding listItemPokemonBinding;
         public PokemonViewHolder(@NonNull ListItemPokemonBinding binding) {
             super(binding.getRoot());
             this.listItemPokemonBinding = binding;
 
-            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
+        }
+        public void bind(Pokemon pokemon)
+        {
+            listItemPokemonBinding.setPokemonVm(new PokemonViewModel(pokemon));
+            listItemPokemonBinding.executePendingBindings();
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(
+                    listItemPokemonBinding.pokemonTypes.getContext(), LinearLayoutManager.HORIZONTAL, false);
+
             listItemPokemonBinding.pokemonTypes.setLayoutManager(linearLayoutManager);
 
-
+            PokemonTypeAdapter pokemonTypeAdapter = new PokemonTypeAdapter(context, pokemon.getTypes());
+            listItemPokemonBinding.pokemonTypes.setAdapter(pokemonTypeAdapter);
         }
     }
 
