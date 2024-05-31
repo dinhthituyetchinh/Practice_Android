@@ -1,6 +1,7 @@
 package adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,10 +36,12 @@ public class PokemonTypeAdapter extends RecyclerView.Adapter<PokemonTypeAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull PokemonTypeViewHolder holder, int position) {
-//        String type = typeItems.get(position);
-//        PokemonTypeViewModel pokemonTypeViewModel = new PokemonTypeViewModel(type);
-//        holder.pokemonTypeListBinding.setPokemonTypeVm(pokemonTypeViewModel);
-        holder.pokemonTypeListBinding.setPokemonTypeVm(new PokemonTypeViewModel(typeItems.get(position)));
+        String type = typeItems.get(position);
+        PokemonTypeViewModel pokemonTypeViewModel = new PokemonTypeViewModel(type);
+        holder.pokemonTypeListBinding.setPokemonTypeVm(pokemonTypeViewModel);
+//        holder.pokemonTypeListBinding.setPokemonTypeVm(new PokemonTypeViewModel(typeItems.get(position)));
+        Log.d("PokemonTypeAdapter", "Type: " + type);
+
     }
 
     @Override
@@ -50,7 +53,7 @@ public class PokemonTypeAdapter extends RecyclerView.Adapter<PokemonTypeAdapter.
         PokemonTypeListBinding pokemonTypeListBinding;
         public PokemonTypeViewHolder(@NonNull PokemonTypeListBinding binding) {
             super(binding.getRoot());
-            pokemonTypeListBinding = binding;
+            this.pokemonTypeListBinding = binding;
         }
     }
 }

@@ -1,6 +1,7 @@
 package adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -19,18 +20,18 @@ import java.util.List;
 
 public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonViewHolder> {
     private final Context context;
-    private final List<Pokemon> items;
+    private List<Pokemon> items;
 
     public PokemonAdapter(Context context, List<Pokemon> items) {
         this.context = context;
         this.items = items;
     }
 
-//    public void setItems(List<Pokemon> items)
-//    {
-//        this.items = items;
-//        notifyDataSetChanged();
-//    }
+    public void updateList(List<Pokemon> items)
+    {
+        this.items = items;
+        notifyDataSetChanged();
+    }
     @NonNull
     @Override
     public PokemonViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -44,6 +45,7 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonV
         PokemonViewModel pokemonViewModel = new PokemonViewModel(pokemon);
         holder.listItemPokemonBinding.setPokemonVm(pokemonViewModel);
         holder.bind(pokemon);
+        Log.d("PokemonAdapter", "Pokemon: " + pokemon);
 
     }
 

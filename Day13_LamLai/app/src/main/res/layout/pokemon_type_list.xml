@@ -6,36 +6,27 @@
             name="pokemon_type_vm"
             type="com.example.day13.PokemonTypeViewModel" />
     </data>
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="8dp"
+       android:paddingRight="15dp"
         android:layout_margin="8dp">
 
         <!-- Type 1 -->
         <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
             android:id="@+id/type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
             android:background="@drawable/type_background"
             android:padding="4dp"
-            android:text="@{pokemon_type_vm.types}"
+            android:text="@{pokemon_type_vm.type}"
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
 
-            <!--            &lt;!&ndash; Type 2 &ndash;&gt;-->
-            <!--            <TextView-->
-            <!--                android:id="@+id/type2"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:background="@drawable/type_background"-->
-            <!--                android:padding="4dp"-->
-            <!--                android:text="POISON"-->
-            <!--                android:textColor="#FFFFFF"-->
-            <!--                android:textSize="14sp" />-->
 
-
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

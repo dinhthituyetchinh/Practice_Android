@@ -28,11 +28,12 @@ public class PokemonListActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     List<Pokemon> originalItems;
     EditText search;
+    Pokemon pokemon;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pokemon_list);
-        loadListPokemon();
+
         recyclerView = findViewById(R.id.listPokemon_RecyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -46,7 +47,21 @@ public class PokemonListActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
+                if (pokemonAdapter != null && originalItems != null) {
+                    if(s.length() == 0 )
+                    {
+                        pokemonAdapter.updateList(originalItems);
+                    }
+                    else {
+                        List<Pokemon> filteredList = new ArrayList<>();
+                        for (Pokemon item : originalItems) {
+                            if (item.getName().toLowerCase().contains(s.toString().toLowerCase())) {
+                                filteredList.add(item);
+                            }
+                        }
+                        pokemonAdapter.updateList(filteredList);
+                    }
+                }
             }
 
             @Override
@@ -54,6 +69,7 @@ public class PokemonListActivity extends AppCompatActivity {
 
             }
         });
+        loadListPokemon();
     }
 
     protected void  loadListPokemon()

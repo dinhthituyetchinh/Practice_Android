@@ -1,10 +1,10 @@
 package com.example.day13;
 
 public class PokemonTypeViewModel {
-    protected String types;
+    protected String type;
 
-    public PokemonTypeViewModel(String types) {
-        this.types = types;
+    public PokemonTypeViewModel(String type) {
+        this.type = type;
     }
-    public String getTypes(){return types;}
+    public String getType(){return type;}
 }
