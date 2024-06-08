@@ -40,7 +40,7 @@ public class PokemonTypeAdapter extends RecyclerView.Adapter<PokemonTypeAdapter.
         PokemonTypeViewModel pokemonTypeViewModel = new PokemonTypeViewModel(type);
         holder.pokemonTypeListBinding.setPokemonTypeVm(pokemonTypeViewModel);
 //        holder.pokemonTypeListBinding.setPokemonTypeVm(new PokemonTypeViewModel(typeItems.get(position)));
-        Log.d("PokemonTypeAdapter", "Type: " + type);
+     //   Log.d("PokemonTypeAdapter", "Type: " + type);
 
     }
 

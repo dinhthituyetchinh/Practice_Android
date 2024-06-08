@@ -1,0 +1,25 @@
+<!-- drawer_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ordinary_drink"
+            android:icon="@drawable/ic_ordinary_drink"
+            android:title="Ordinary Drinks" />
+        <item
+            android:id="@+id/nav_alcoholic"
+            android:icon="@drawable/ic_alcoholic"
+            android:title="Alcoholic Drinks" />
+        <item
+            android:id="@+id/nav_non_alcoholic"
+            android:icon="@drawable/ic_non_alcoholic"
+            android:title="Non-Alcoholic Drinks" />
+        <item
+            android:id="@+id/nav_gin"
+            android:icon="@drawable/ic_gin"
+            android:title="Gin Drinks" />
+        <item
+            android:id="@+id/nav_vodka"
+            android:icon="@drawable/ic_vodka"
+            android:title="Vodka Drinks" />
+    </group>
+</menu>

@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.exercise01'
+    namespace 'com.example.bai2_de1'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.exercise01"
+        applicationId "com.example.bai2_de1"
         minSdk 26
         targetSdk 34
         versionCode 1
@@ -29,6 +29,11 @@ android {
 }
 
 dependencies {
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
 
     implementation libs.appcompat
     implementation libs.material

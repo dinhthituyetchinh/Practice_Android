@@ -28,7 +28,6 @@ public class PokemonListActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     List<Pokemon> originalItems;
     EditText search;
-    Pokemon pokemon;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,8 +99,6 @@ public class PokemonListActivity extends AppCompatActivity {
                     Log.e("PokemonListActivity Name", pokemon.getName());
                     Log.e("PokemonListActivity Img", pokemon.getImage());
                     Log.e("PokemonListActivity Type", pokemon.getTypes().stream().count()+"");
-
-
 
                 }
 

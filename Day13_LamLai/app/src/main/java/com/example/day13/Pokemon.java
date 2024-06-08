@@ -1,5 +1,10 @@
 package com.example.day13;
 
+import android.graphics.drawable.Drawable;
+import android.widget.RelativeLayout;
+
+import androidx.databinding.BindingAdapter;
+
 import java.util.List;
 
 public class Pokemon {
@@ -47,6 +52,21 @@ public class Pokemon {
         this.name = name;
         this.image = img;
         this.types = types;
+    }
+    private Drawable background;
+
+    public Drawable getBackground() {
+        return background;
+    }
+
+    public void setBackground(Drawable background) {
+        this.background = background;
+    }
+    @BindingAdapter("backgroundResource")
+    public static void setBackgroundResource(RelativeLayout layout, Drawable backgroundResource) {
+        if (backgroundResource != null) {
+            layout.setBackground(backgroundResource);
+        }
     }
 }
 

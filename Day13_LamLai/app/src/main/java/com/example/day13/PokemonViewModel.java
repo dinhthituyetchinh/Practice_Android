@@ -1,5 +1,7 @@
 package com.example.day13;
 
+import android.graphics.drawable.Drawable;
+
 public class PokemonViewModel {
     private Pokemon pokemon;
 
@@ -19,4 +21,5 @@ public class PokemonViewModel {
     {
         return String.format(this.pokemon.getId());
     }
+    public Drawable getBackgroundColor(){return this.pokemon.getBackground();}
 }

@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:background="@drawable/pokemon_card_background"
+        app:backgroundResource="@{pokemon_vm.backgroundColor}"
         android:layout_margin="8dp">
 
         <!-- Pokemon Image -->

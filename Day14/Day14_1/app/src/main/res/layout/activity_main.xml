@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <!-- Container for the search bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F8F8F8"
+        android:padding="16dp">
+
+        <!-- Title text -->
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="List pokemon"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Search bar -->
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_text"
+            android:layout_marginTop="16dp"
+            android:hint="Search by name"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:padding="10dp"
+            android:background="@drawable/search_bar_background" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listPokemon_RecyclerView"
+            android:layout_below="@id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
